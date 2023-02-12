@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../plugins/bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="icon" href="/images/Heart.png" >
+    <title >health Track</title>
+</head>
+
+<body>
+    <div class="flex-dashboard">
+        <sidebar id="sidebar">
+            <div class="sidebar-title">
+                <a href="/views/dashboard.html"><img src="../images/Heart.png" alt="image"></a>
+                <h2>Health Track</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li class="selected">
+                        <i class=" fa-solid fa-house-chimney "></i>
+                        <a href="dashboard.html "> Dashboard</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-user "></i>
+                        <a href="perfil.html "> Perfil </a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-scale-balanced"></i>
+                        <a href="GerenciarPeso.html "> Gerenciar Peso e altura</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-heart-pulse "></i>
+                        <a href="GerenciarPressao.html "> gerenciar Pressão arterial</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-person-skating "></i>
+                        <a href="GerenciarAtividade.html "> Gerenciar atividades físicas</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-utensils "></i>
+                        <a href="GerenciarAlimentos.html "> Gerenciar alimentos</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-calculator "></i>
+                        <a href="CalcularIMC.html">Calcular IMC</a>
+                    </li>
+                    <li class="sidebar_logout">
+                        <i  class="fa-solid fa-arrow-right-from-bracket "></i>
+                        <a class="logout-txt" id="logout-button" onclick="AmostraPopUp()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </sidebar>
+        <main id="main-content">
+            <header>
+                <div class="imgIcon">
+                    <img src="/images/Heart.png" alt="coracao">
+                    <h2>Health Track</h2>
+                </div>
+                <i id="iconMenu" onclick="responsiveSiderbar()" class="fas fa-bars "></i>
+                <a class="logount" id="Logout_header" onclick="AmostraPopUp()"><i class="fa-solid fa-arrow-right-from-bracket "></i> logout</a>
+            </header>
+            <div class="main-content ">
+                <div class="main-content-title">
+                    <h2>Dashboard</h2>
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-flex-parent">
+                        <div class="dashboard-box">
+                            <div class="dashboard-box-wrappe">
+                                <div class="box-icon box-weigth"><i class="fa-solid fa-dumbbell" id="peso"></i></div>
+                                <div class="value" id="value-peso-ds"></div>
+                                <div class="type">PESO</div>
+                                <div class="box-value-percentual box-value-weight">
+                                    <i class="indese-peso-ds" id="porce-peso-ds"> - </i>
+                                    <i class="fa-solid fa-angle-up" style="color: green; display: none;"  id="porce-peso-ds-up"></i>
+                                    <i class="fa-solid fa-angle-up" style="color: red; transform: rotate(180deg);display: none;" id="porce-peso-ds-dn"></i>
+                                    <div id="value-porce-peso" style="color: white;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dashboard-box">
+                            <div class="dashboard-box-wrappe">
+                                <div class="box-icon box-pressure"><i id="coracao-pressao" class="fa-solid fa-heart-pulse "></i></div>
+                                <div class="value" id="value-pressao-ds"></div>
+                                <div class="type">PRESSÃO ARTERIAL</div>
+                                <div class="box-value-percentual box-value-pressure">
+                                    <i class="indese-peso-ds" id="porce-pressao-ds"> - </i>
+                                    <i class="fa-solid fa-angle-up" style="color: green; display: none;"  id="porce-pressao-ds-up"></i>
+                                    <i class="fa-solid fa-angle-up" style="color: red; transform: rotate(180deg);display: none;" id="porce-pressao-ds-dn"></i>
+                                    <div id="value-porce-pressao" style="color: white;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dashboard-box">
+                            <div class="dashboard-box-wrappe">
+                                <div class="box-icon box-imc"><i class="fa-solid fa-calculator " id="value-imc"></i></div>
+                                <div class="value" id="value-imc-ds"></div>
+                                <div class="type">IMC</div>
+                                <div class="indese-imc" id="indese-imc"></div>
+                                <div class="box-value-percentual box-value-pressure" style="margin: 0;">
+                                    <i class="indese-peso-ds" id="porce-imc-ds"> - </i>
+                                    <i class="fa-solid fa-angle-up" style="color: green; display: none;"  id="porce-imc-ds-up"></i>
+                                    <i class="fa-solid fa-angle-up" style="color: red; transform: rotate(180deg);display: none;" id="porce-imc-ds-dn"></i>
+                                    <div id="value-porce-imc" style="color: white; display: block;"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="dashboard-box">
+                            <div class="dashboard-box-wrappe">
+                                <div class="box-icon box-workout"><i class="fa-solid fa-person-biking" id="atividade"></i></div>
+                                <div class="value" id="atividade-ds"></div>
+                                <div class="type">atividade Fisíca</div>
+                                <div class="box-value-percentual box-value-workout">
+                                    <i class="fa-solid fa-calendar"></i>
+                                    <span id="date-atividade-ds">06/06/2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-wrapper">
+                <div class="popup">
+                  <div class="popup-close">X</div>
+                  <div class="popup-content">
+                      <h2>Deseja realmente sair da conta?</h2>
+                      <div class="popup-buttons">
+                        <button id="btn-popup-sim" class="btnPopupSim">Sim</button>
+                        <button id="btn-popup-nao" class="btnPopupNao">Nao</button>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    </div>
+    <script src="../plugins/bootstrap-5.1.3-dist/js/bootstrap.min.js "></script>
+    <script src="../plugins/fontawesome-free-6.1.1-web/js/all.min.js "></script>
+    <script defer src="/js/menu.js"></script>
+    <script src="/js/dados_dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,316 @@
+div.perfil-parent {
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+div.perfil {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    padding: 10px 10px;
+    width: 100%;
+    background-color: #121212;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+div.perfil-form {
+    width: 100%;
+    padding: 5px;
+}
+div.perfil-form label {
+    font-size: 14px;
+    color: #f8f8f8;
+    margin-top: 5px;
+}
+
+div.perfil-form .custom-file {
+    margin-top: 10px;
+}
+
+div.perfil-form input{
+    font-size: 14px;
+    background-color: transparent;
+    border: 1px solid #303030;
+    color: #f8f8f8;
+    border-radius: 10px;
+    height: 35px;
+    width: 100%;
+    padding-left: 3px;
+    outline: none;
+}
+div.perfil-form option{
+    background-color: #151515;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-salva {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    width: 100px;
+    height: 30px;
+}
+
+.btn-salva:hover{
+    color: #4d4d4d;
+    transform: scale(1.05);
+    transition: .4s;
+}
+
+.btn-excluir-conta{
+    margin-top: 20px;
+    background: red;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    width: 200px;
+    height: 30px;
+}
+
+.btn-excluir-conta:hover{
+    color: black;
+    transform: scale(1.05);
+    transition: .4s;
+}
+
+.msg{
+    color:green;
+    bottom: 0px;
+}
+.msg-erro{
+    color: red;
+    bottom: 0px;
+}
+
+.popup-wrapper{
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.2s;
+}
+
+.popup-content h2{
+    color: white;
+}
+
+.popup{
+    font-family:  Roboto, sans-serif;
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    margin: 10% auto;
+    padding: 20px;
+    background: #151515;
+    position: relative;
+    border-radius: 15px;
+}
+
+.popup-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+
+.popup-buttons button{
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    width: 45%;
+    transition: all ease 0.2s;
+}
+
+.popup-close{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color:white;
+}
+
+.btnPopupSim{
+    background-color: green;
+}
+
+.btnPopupSim:hover{
+    color: #252525;
+    transform: scale(1.05);
+}
+
+.btnPopupNao{
+    background-color: red;
+}
+
+.btnPopupNao:hover{
+    color: #252525;
+    transform: scale(1.05);
+}
+
+.custom-checkbox-perfil {
+    margin-top: 10px;
+    padding-left: 2px;
+
+}
+
+.custom-checkbox-perfil input {
+    display: none;
+}
+
+.custom-checkbox-perfil label {
+    color: #fff;
+}
+
+.custom-checkbox-perfil input + label:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border-radius: 6px;
+    background-color:transparent;
+    border: 1px solid #6e8efb;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 3px;
+}
+  
+.custom-checkbox-perfil input:checked + label:before {
+background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 10 10'%3E%3Cg class='nc-icon-wrapper' stroke-width='1' fill='%23555555'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-cap='butt' d='M2.83 4.72l1.58 1.58 2.83-2.83'/%3E%3C/g%3E%3C/svg%3E");
+background-color:#a777e3;
+background-position: center;
+border: none;
+padding: 1px;
+}
+
+@media screen and (max-width:1250px){
+    div.perfil-parent {
+        padding: 3px 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: auto;
+    }
+    div.perfil {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        padding: 10px;
+        width: 100%;
+        border-radius: 20px;
+        background-color: #121212;
+
+    }
+    div.perfil-form {   
+        padding-bottom: 1px;
+        margin-top: 1px;
+        width: 100%;
+    }
+    .btn-salva {
+        margin-top: 5px;
+        width: 100% ;
+    }
+    .btn-salva {
+        margin-top: 20px;
+        width: 80px;
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        color: #fff;
+    }
+    .btn-excluir-conta{
+        width: 150px;
+    }
+    .popup{
+        font-family:  Roboto, sans-serif;
+        text-align: center;
+        width: 100%;
+        max-width: 450px;
+        margin: 10% auto;
+        padding: 20px;
+        background: #151515;
+        position: relative;
+        border-radius: 15px;
+    }
+    .popup-wrapper{
+        background: rgba(0, 0, 0, .5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: 90%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        transition: all ease 0.2s;
+    }
+    
+}
+
+@media screen and (max-width:769px){
+    .btn-salva {
+        margin-top: 20px;
+        width: 100%;
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        color: #fff;
+    }
+    .btn-excluir-conta{
+        margin-top: 10px;
+        width: 100%;
+    }
+    .buttons{
+        flex-direction: column;
+    }
+    .popup{
+        font-family:  Roboto, sans-serif;
+        text-align: center;
+        width: 90%;
+        max-width: 450px;
+        margin: 10% auto;
+        padding: 20px;
+        background: #151515;
+        position: relative;
+        border-radius: 15px;
+    }
+    .popup-wrapper{
+        background: rgba(0, 0, 0, .5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        transition: all ease 0.2s;
+    }
+}
+
+@media screen and (max-width:500px){
+
+    div.perfil{
+        height: 100%;
+        margin-top: 1px;
+    }
+}

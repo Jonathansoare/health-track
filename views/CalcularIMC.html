@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../plugins/bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="icon" href="/images/Heart.png" >
+    <title>health Track</title>
+</head>
+
+<body>
+    <div class="flex-dashboard">
+        <sidebar id="sidebar">
+            <div class="sidebar-title">
+                <a href="/views/dashboard.html"><img src="../images/Heart.png" alt="image"></a>
+                <h2>Health Track</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <i class=" fa-solid fa-house-chimney "></i>
+                        <a href="dashboard.html "> Dashboard</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-user "></i>
+                        <a href="perfil.html "> Perfil </a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-scale-unbalanced "></i>
+                        <a href="GerenciarPeso.html "> Gerenciar Peso e altura</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-heart-pulse "></i>
+                        <a href="GerenciarPressao.html "> gerenciar Pressão arterial</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-person-skating "></i>
+                        <a href="GerenciarAtividade.html "> Gerenciar atividades físicas</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-utensils "></i>
+                        <a href="GerenciarAlimentos.html "> Gerenciar alimentos</a>
+                    </li>
+                    <li class="selected">
+                        <i class="fa-solid fa-calculator "></i>
+                        <a href="CalcularIMC.html "> Calcular IMC</a>
+                    </li>
+                    <li class="sidebar_logout">
+                        <i  class="fa-solid fa-arrow-right-from-bracket "></i>
+                        <a class="logout-txt" id="logout-button" onclick="AmostraPopUp()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </sidebar>
+        <main>
+            <header>
+                <div class="imgIcon">
+                    <img src="/images/Heart.png" alt="coracao">
+                    <h2>Health Track</h2>
+                </div>
+                <i id="iconMenu" onclick="responsiveSiderbar()" class="fas fa-bars "></i>
+                <a class="logount" id="Logout_header" onclick="AmostraPopUp()"><i class="fa-solid fa-arrow-right-from-bracket "></i> logout</a>
+            </header>
+            <div class="main-content ">
+                <div class="imc-parent">
+                    <div class="imc">
+                        <div class="imc-value" id="span-imc"></div>
+                        <div class="imc-indese" id="indese-imc"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-wrapper-logount">
+                <div class="popup">
+                  <div class="popup-close">X</div>
+                  <div class="popup-content">
+                      <h2>Deseja realmente sair da conta?</h2>
+                      <div class="popup-buttons">
+                        <button id="btn-popup-sim" class="btnPopupSim">Sim</button>
+                        <button id="btn-popup-nao" class="btnPopupNao">Nao</button>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script defer src="../plugins/bootstrap-5.1.3-dist/js/bootstrap.min.js "></script>
+    <script defer src="../plugins/fontawesome-free-6.1.1-web/js/all.min.js "></script>
+    <script defer src="../js/menu.js"></script>
+    <script src="/js/imc.js"></script>
+</body>
+
+</html>
